@@ -1,34 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Hello Azure - Python Quickstart</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
   <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+  <title>Home</title>
 </head>
-<html>
 
 <body>
-  <main>
-    <div class="px-4 py-3 my-2 text-center">
-      <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/azure-icon.svg') }}" alt="Azure Logo"
-        width="192" height="192" />
-      <!-- <img  src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
-      <h1 class="display-6 fw-bold text-primary">Welcome to Azure</h1>
-    </div>
-    <form method="post" action="{{url_for('hello')}}">
-      <div class="col-md-6 mx-auto text-center">
-        <label for="name" class="form-label fw-bold fs-5">Could you please tell me your name?</label>
+  <header>
 
-        <!-- <p class="lead mb-2">Could you please tell me your name?</p> -->
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
-          <input type="text" class="form-control" id="name" name="name" style="max-width: 256px;">
-        </div>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
-          <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Say Hello</button>
-        </div>
+  </header>
+  <main>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+          role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+        <button class="nav-link" id="nav-meals-tab" data-bs-toggle="tab" data-bs-target="#nav-meals" type="button"
+          role="tab" aria-controls="nav-meals" aria-selected="false">Meals</button>
+        <button class="nav-link" id="nav-schedule-tab" data-bs-toggle="tab" data-bs-target="#nav-schedule" type="button"
+          role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</button>
       </div>
-    </form>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        Home
+      </div>
+      <div class="tab-pane fade" id="nav-meals" role="tabpanel" aria-labelledby="nav-meals-tab" tabindex="0">
+        Meals
+      </div>
+      <div class="tab-pane fade" id="nav-schedule" role="tabpanel" aria-labelledby="nav-schedule-tab" tabindex="0">
+        Schedule
+      </div>
+    </div>
   </main>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
